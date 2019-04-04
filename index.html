@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/owl.carousel.css">
     <link rel="stylesheet" href="styles/owl.theme.default.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
 </head>
@@ -38,8 +39,8 @@
             <a href="contact.html">Contact</a>
             <div id="navLine"></div>
             <a href="javascript:void(0)"><img class="navIcons" id="navBarFb" src="images/facebook-white.png" /></a>
-            <a href="https://www.instagram.com/matt.sy_photo/" target="_blank"><img style="margin-top: 4px" class="navIcons" id="navBarIg"
-                    src="images/instagram-white.png" /></a>
+            <a href="https://www.instagram.com/matt.sy_photo/" target="_blank"><img style="margin-top: 4px"
+                    class="navIcons" id="navBarIg" src="images/instagram-white.png" /></a>
         </div>
     </nav>
 
@@ -57,36 +58,10 @@
     </section>
 
     <section id="demo">
-        <br/>
-        <h1>Maybe a title or description here idk</h1>
-        <br/>
-            <div class="owl-carousel owl-theme" id="thisCarousel">
-                <a href="./images/clouds-min.jpg" data-fancybox>
-                    <img src="./images/clouds-min.jpg" />
-                </a>
-                <a href="https://imgur.com/d25lDMY.jpg" data-fancybox>
-                    <img src="https://imgur.com/d25lDMY.jpg" />
-                </a>
-                <a href="https://imgur.com/hweO0j6.jpg" data-fancybox>
-                    <img src="https://imgur.com/hweO0j6.jpg" />
-                </a>
-                <a href="https://imgur.com/vgXZpZA.jpg" data-fancybox>
-                    <img src="https://imgur.com/vgXZpZA.jpg" />
-                </a>
-                <a href="https://imgur.com/vmAU9Yj.jpg" data-fancybox>
-                    <img src="https://imgur.com/vmAU9Yj.jpg" />
-                </a>
-                <a href="https://imgur.com/qqkp9te.jpg" data-fancybox>
-                    <img src="https://imgur.com/qqkp9te.jpg" />
-                </a>
-                <a href="https://imgur.com/Dd0epBD.jpg" data-fancybox>
-                    <img src="https://imgur.com/Dd0epBD.jpg" />
-                </a>
-                <a href="https://imgur.com/nMZtovr.jpg" data-fancybox>
-                    <img src="https://imgur.com/nMZtovr.jpg" />
-                </a>
-            </div>
-        </section>
+        <div class="owl-carousel owl-theme" id="thisCarousel">
+            <!-- render from firebase -->
+        </div>
+    </section>
 
     <section id="info">
         <div>
@@ -122,11 +97,24 @@
             <a href="contact.html">Contact</a>
             <div id="footerLine"></div>
             <a href="javascript:void(0)"><img class="navIcons" id="footerFb" src="images/facebook-dark.png" /></a>
-            <a href="https://www.instagram.com/matt.sy_photo/" target="_blank"><img style="margin-top: 4px" class="navIcons" id="footerIg"
-                    src="images/instagram-dark.png" /></a>
+            <a href="https://www.instagram.com/matt.sy_photo/" target="_blank"><img style="margin-top: 4px"
+                    class="navIcons" id="footerIg" src="images/instagram-dark.png" /></a>
         </div>
     </footer>
 
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyACMwuyNFnK4a4HjF0f1MCz6PlQiPYqsUQ",
+            authDomain: "matt-sy-photography.firebaseapp.com",
+            databaseURL: "https://matt-sy-photography.firebaseio.com",
+            projectId: "matt-sy-photography",
+            storageBucket: "matt-sy-photography.appspot.com",
+            messagingSenderId: "112905702365"
+        };
+        firebase.initializeApp(config);
+        const db = firebase.firestore();
+    </script>
     <script src="js/home.js"></script>
     <script src="js/owl.carousel.js"></script>
 </body>

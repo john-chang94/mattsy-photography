@@ -7,13 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sy Photography</title>
 
-    <!-- <link rel="stylesheet" href="styles/styles.css"> -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
 
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
     <link rel="stylesheet" href="styles/styles.css">
@@ -35,57 +34,41 @@
             <a href="contact.html">Contact</a>
             <div id="navLine"></div>
             <a href="javascript:void(0)"><img class="navIcons" id="navBarFb" src="images/facebook-white.png" /></a>
-            <a href="https://www.instagram.com/matt.sy_photo/" target="_blank"><img style="margin-top: 4px" class="navIcons"
-                    id="navBarIg" src="images/instagram-white.png" /></a>
+            <a href="https://www.instagram.com/matt.sy_photo/" target="_blank"><img style="margin-top: 4px"
+                    class="navIcons" id="navBarIg" src="images/instagram-white.png" /></a>
         </div>
     </nav>
 
     <section id="eventsContainer">
         <div id="eventsBg">
             <div class="albumCard">
-                <!-- <a class="albumCover" href="https://imgur.com/JRgBAB2.jpg" data-fancybox="gallery1"> -->
-                    <img class="albumCover" src="https://imgur.com/JRgBAB2.jpg" />
-                <!-- </a>
-                <a href="https://imgur.com/d25lDMY.jpg" data-fancybox="gallery1" data-thumb="https://imgur.com/d25lDMY.jpg"></a>
-                <a href="https://imgur.com/hweO0j6.jpg" data-fancybox="gallery1" data-thumb="https://imgur.com/hweO0j6.jpg"></a>
-                <a href="https://imgur.com/vgXZpZA.jpg" data-fancybox="gallery1" data-thumb="https://imgur.com/vgXZpZA.jpg"></a> -->
-                
-                <div class="fadeCard" href="images/clouds.jpg" data-fancybox="gallery1" data-thumb="https://imgur.com/JRgBAB2.jpg">
-                    <a href="https://imgur.com/d25lDMY.jpg" data-fancybox="gallery1" data-thumb="https://imgur.com/d25lDMY.jpg"></a>
-                    <a href="https://imgur.com/hweO0j6.jpg" data-fancybox="gallery1" data-thumb="https://imgur.com/hweO0j6.jpg"></a>
-                    <a href="https://imgur.com/vgXZpZA.jpg" data-fancybox="gallery1" data-thumb="https://imgur.com/vgXZpZA.jpg"></a>
-                    <h3>Title/Event</h3>
-                </div>
-            </div>
-            <div class="albumCard">
-                <img class="albumCover" src="images/couple.jpg" alt="" />
-                <div class="fadeCard" href="images/couple.jpg" data-fancybox="gallery2" data-thumb="images/couple.jpg">
-                    <a href="https://c2.staticflickr.com/6/5499/30972532232_051e1dc57e_h.jpg" data-fancybox="gallery2" data-thumb="https://c2.staticflickr.com/6/5499/30972532232_051e1dc57e_h.jpg"></a>
-                    <a href="https://c1.staticflickr.com/9/8021/29345513551_0c565462d8_k.jpg" data-fancybox="gallery2" data-thumb="https://c1.staticflickr.com/9/8021/29345513551_0c565462d8_k.jpg"></a>
-                    <h3>Title/Event</h3>
-                </div>
-            </div>
-            <div class="albumCard">
                 <img class="albumCover" src="https://i.imgur.com/PAadNn0.jpg" alt="" />
-                <div class="fadeCard" href="https://i.imgur.com/PAadNn0.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/PAadNn0.jpg">
-                    <a href="https://i.imgur.com/ltYo0xq.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/ltYo0xq.jpg"></a>
-                    <a href="https://i.imgur.com/fNcnFj7.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/fNcnFj7.jpg"></a>
-                    <a href="https://i.imgur.com/pQBahpC.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/pQBahpC.jpg"></a>
-                    <a href="https://i.imgur.com/lbkuuHR.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/lbkuuHR.jpg"></a>
-                    <a href="https://i.imgur.com/9HggL6q.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/9HggL6q.jpg"></a>
-                    <a href="https://i.imgur.com/aZO7gnp.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/aZO7gnp.jpg"></a>
-                    <a href="https://i.imgur.com/i3fPcGj.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/i3fPcGj.jpg"></a>
-                    <a href="https://i.imgur.com/ajADsI2.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/ajADsI2.jpg"></a>
-                    <a href="https://i.imgur.com/Ya3Z1qu.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/Ya3Z1qu.jpg"></a>
-                    <a href="https://i.imgur.com/rhEElWE.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/rhEElWE.jpg"></a>
-                    <a href="https://i.imgur.com/8OpNwFA.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/8OpNwFA.jpg"></a>
-                    <a href="https://i.imgur.com/gyixk0X.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/gyixk0X.jpg"></a>
-                    <a href="https://i.imgur.com/PAadNn0.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/PAadNn0.jpg"></a>
-                    <a href="https://i.imgur.com/LgsTNVI.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/LgsTNVI.jpg"></a>
-                    <a href="https://i.imgur.com/XXCwr5h.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/XXCwr5h.jpg"></a>
-                    <a href="https://i.imgur.com/G9BaKCm.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/G9BaKCm.jpg"></a>
-                    <a href="https://i.imgur.com/kSWqCPa.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/kSWqCPa.jpg"></a>
-                    <a href="https://i.imgur.com/fCtr1lN.jpg" data-fancybox="gallery3" data-thumb="https://i.imgur.com/fCtr1lN.jpg"></a>
+                <div id="sisterWedding" class="fadeCard" href="https://i.imgur.com/PAadNn0.jpg"
+                    data-fancybox="sister-wedding" data-thumb="https://i.imgur.com/PAadNn0.jpg">
+                    <h3>Title/Event</h3>
+                </div>
+            </div>
+            <div class="albumCard">
+                <img class="albumCover" src="https://imgur.com/JRgBAB2.jpg" />
+                <div class="fadeCard" href="https://imgur.com/JRgBAB2.jpg" data-fancybox="gallery1"
+                    data-thumb="https://imgur.com/JRgBAB2.jpg">
+                    <a href="https://imgur.com/d25lDMY.jpg" data-fancybox="gallery1"
+                        data-thumb="https://imgur.com/d25lDMY.jpg"></a>
+                    <a href="https://imgur.com/hweO0j6.jpg" data-fancybox="gallery1"
+                        data-thumb="https://imgur.com/hweO0j6.jpg"></a>
+                    <a href="https://imgur.com/vgXZpZA.jpg" data-fancybox="gallery1"
+                        data-thumb="https://imgur.com/vgXZpZA.jpg"></a>
+                    <h3>Title/Event</h3>
+                </div>
+            </div>
+            <div class="albumCard">
+                <img class="albumCover" src="https://imgur.com/hweO0j6.jpg" alt="" />
+                <div class="fadeCard" href="https://imgur.com/hweO0j6.jpg" data-fancybox="gallery2"
+                    data-thumb="https://imgur.com/hweO0j6.jpg">
+                    <a href="https://c2.staticflickr.com/6/5499/30972532232_051e1dc57e_h.jpg" data-fancybox="gallery2"
+                        data-thumb="https://c2.staticflickr.com/6/5499/30972532232_051e1dc57e_h.jpg"></a>
+                    <a href="https://c1.staticflickr.com/9/8021/29345513551_0c565462d8_k.jpg" data-fancybox="gallery2"
+                        data-thumb="https://c1.staticflickr.com/9/8021/29345513551_0c565462d8_k.jpg"></a>
                     <h3>Title/Event</h3>
                 </div>
             </div>
@@ -121,24 +104,6 @@
             </div>
             <div class="albumCard">
                 <img class="albumCover" src="images/beach.jpg" alt="" />
-                <div class="fadeCard">
-                    <h3>Title/Event</h3>
-                </div>
-            </div>
-            <div class="albumCard">
-                <img class="albumCover" src="images/couple.jpg" alt="" />
-                <div class="fadeCard">
-                    <h3>Title/Event</h3>
-                </div>
-            </div>
-            <div class="albumCard">
-                <img class="albumCover" src="images/lights-night.jpg" alt="" />
-                <div class="fadeCard">
-                    <h3>Title/Event</h3>
-                </div>
-            </div>
-            <div class="albumCard">
-                <img class="albumCover" src="images/reflection.jpg" alt="" />
                 <div class="fadeCard">
                     <h3>Title/Event</h3>
                 </div>
@@ -146,6 +111,19 @@
         </div>
     </section>
 
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyACMwuyNFnK4a4HjF0f1MCz6PlQiPYqsUQ",
+            authDomain: "matt-sy-photography.firebaseapp.com",
+            databaseURL: "https://matt-sy-photography.firebaseio.com",
+            projectId: "matt-sy-photography",
+            storageBucket: "matt-sy-photography.appspot.com",
+            messagingSenderId: "112905702365"
+        };
+        firebase.initializeApp(config);
+        const db = firebase.firestore();
+    </script>
     <script src="js/main.js"></script>
     <script src="js/port-events.js"></script>
 </body>

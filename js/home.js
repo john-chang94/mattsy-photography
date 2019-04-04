@@ -1,12 +1,24 @@
-$(document).ready(function () {
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        items: 4,
-        margin: 13,
-        dots: false,
-        nav: true,
-        navText: ['<i class="fas fa-angle-left" aria-hidden="true"></i>', '<i class="fas fa-angle-right" aria-hidden="true"></i>']
-    });
+const topPhotos = $('#thisCarousel');
+
+renderTopPhotos = (doc) => {
+    let photo = $('<a href=' + doc.data().img + ' data-fancybox> <img src=' + doc.data().img + ' />');
+    $(topPhotos).append(photo);
+}
+
+db.collection('top-photos').get().then((snapshot) => {
+    snapshot.docs.forEach(doc => {
+        renderTopPhotos(doc);
+    })
+    setTimeout(() => {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            items: 4,
+            margin: 13,
+            dots: false,
+            nav: true,
+            navText: ['<i class="fas fa-angle-left" aria-hidden="true"></i>', '<i class="fas fa-angle-right" aria-hidden="true"></i>']
+        });
+    }, 50);
 })
 
 $().fancybox({
