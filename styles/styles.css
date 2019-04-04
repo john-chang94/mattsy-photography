@@ -149,14 +149,16 @@
 }
 
 #aboutLogo {
-  width: 100%;
-  margin-bottom: 30px;
+  width: 75%;
+  margin-bottom: 15px;
 }
 
 .aboutContainer p {
+  text-align: center;
   font-size: 18px;
   font-family: Helvetica;
   color: rgb(223, 223, 223);
+  margin-bottom: 45px;
 }
 
 /******* END OF ABOUT *******/
