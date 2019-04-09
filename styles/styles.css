@@ -356,6 +356,15 @@
 
 .contactMain p {
   font-family: Helvetica;
+  text-align: center;
+}
+
+.contactIcons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
 }
 
 .contactMain a {
@@ -363,7 +372,11 @@
   color: rgb(231, 199, 16);
 }
 
-#contactVLine {
+.contactMain i {
+  font-size: 24px;
+}
+
+/* #contactVLine {
   background-color: rgb(109, 109, 109);
   width: 2px;
   height: 720px;
@@ -402,7 +415,7 @@
   height: 25px;
   border-radius: 3px;
   font-size: 16px;
-}
+} */
 
 /***************************************/
 
