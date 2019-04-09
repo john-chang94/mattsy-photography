@@ -2,7 +2,7 @@
     $name = $_POST['name'];
     $visitor_email = $_POST['email'];
     $message = $_POST['message'];
-    $my_email = 'changjohn94@gmail.com'
+    $my_email = 'j.chang94@yahoo.com'
 ?>
 
 <?php
