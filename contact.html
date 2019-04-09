@@ -51,13 +51,13 @@
             </div>
             <div id="contactVLine"></div>
             <div class="contactForm">
-                <form action="">
+                <form action="post" action="send-email.php">
                     <p>Name (required)</p>
-                    <input type="text" class="contactBox" />
+                    <input type="text" class="contactBox" name="name" />
                     <p>Email (required)</p>
-                    <input type="text" class="contactBox" />
+                    <input type="text" class="contactBox" name="email" />
                     <p>Message (required)</p>
-                    <textarea rows="10" class="messageBox"></textarea>
+                    <textarea rows="10" class="messageBox" name="message"></textarea>
                     <button type="submit" class="submitBtn">Submit</button>
                 </form>
             </div>
