@@ -8,8 +8,10 @@
     <title>Sy Photography</title>
 
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/owl.carousel.css">
-    <link rel="stylesheet" href="styles/owl.theme.default.css">
+    <!-- <link rel="stylesheet" href="styles/owl.carousel.css">
+    <link rel="stylesheet" href="styles/owl.theme.default.css"> -->
+    <link rel="stylesheet" href="styles/slick.css">
+    <link rel="stylesheet" href="styles/slick-theme.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -44,6 +46,16 @@
         </div>
     </nav>
 
+    <!-- <section id="hero">
+        
+    </section> -->
+
+    <section id="demo">
+        <div class="carousel">
+            <!-- render from firebase -->
+        </div>
+    </section>
+
     <section id="about">
         <div id="aboutBg">
             <img class="bgBubble" src="images/black-bubble.png" alt="">
@@ -56,12 +68,6 @@
                     connecting with people and telling their story by capturing the beauty and emotion of the day
                     through photography.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="demo">
-        <div class="owl-carousel owl-theme" id="thisCarousel">
-            <!-- render carousel firebase -->
         </div>
     </section>
 
@@ -85,25 +91,6 @@
         </div>
     </section>
 
-    <footer id="footer">
-        <div class="footerLinks">
-            <a href="index.html">Home</a>
-            <div class="dropUp">
-                <span>Portfolio <i class="fa fa-caret-up"></i></span>
-                <div class="dropUpFooter">
-                    <a href="port-travel.html">Travel</a>
-                    <a href="port-events.html">Events/Weddings</a>
-                    <a href="port-personal.html">Personal</a>
-                </div>
-            </div>
-            <a href="contact.html">Contact</a>
-            <div id="footerLine"></div>
-            <a href="javascript:void(0)"><img class="navIcons" id="footerFb" src="images/facebook-dark.png" /></a>
-            <a href="https://www.instagram.com/matt.sy_photo/" target="_blank"><img style="margin-top: 4px"
-                    class="navIcons" id="footerIg" src="images/instagram-dark.png" /></a>
-        </div>
-    </footer>
-
     <script>
         // Initialize Firebase
         var config = {
@@ -117,6 +104,7 @@
         firebase.initializeApp(config);
         const db = firebase.firestore();
     </script>
+    <script src="js/slick.min.js"></script>
     <script src="js/home.js"></script>
     <script src="js/owl.carousel.js"></script>
 </body>

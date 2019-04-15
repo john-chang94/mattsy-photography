@@ -1,39 +1,37 @@
-const topPhotos = $('#thisCarousel');
-
-renderTopPhotos = (doc) => {
-    let photo = $('<a href=' + doc.data().img + ' data-fancybox> <img src=' + doc.data().img + ' />');
-    $(topPhotos).append(photo);
-}
+let one = 'C:/Users/chang/Documents/GitHub/sy-photography/images/wedding/_12A0076.jpg';
+let two = 'C:/Users/chang/Documents/GitHub/sy-photography/images/couple.jpg';
+let three = 'C:/Users/chang/Documents/GitHub/sy-photography/images/clouds.jpg'
 
 db.collection('top-photos').get().then((snapshot) => {
+    let photos = [one, two, three, 'C:/Users/chang/Documents/GitHub/sy-photography/images/lightroom.jpg', 'C:/Users/chang/Documents/GitHub/sy-photography/images/lights-night.jpg', 'C:/Users/chang/Documents/GitHub/sy-photography/images/reflection.jpg', 'C:/Users/chang/Documents/GitHub/sy-photography/images/bank.jpg']
     snapshot.docs.forEach(doc => {
-        renderTopPhotos(doc);
+        let photo = $(`<div> <div style="height: 825px; background-image: url('${doc.data().img}'); background-position: center; background-size: cover;"></div></div>`);
+        $('.carousel').append(photo);
     })
-    setTimeout(() => {
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            items: 4,
-            margin: 13,
-            dots: false,
-            nav: true,
-            navText: ['<i class="fas fa-angle-left" aria-hidden="true"></i>', '<i class="fas fa-angle-right" aria-hidden="true"></i>']
-        });
-    }, 50);
+    // setTimeout(() => {
+    //     for (let i = 0; i < photos.length; i++) {
+    //         setTimeout(() => {
+    //             $('#hero').css('background-image', 'url(' + photos[i] + ')')
+    //         }, i*3000);
+    //     }
+    // }, 50);
 })
 
-$().fancybox({
-    selector: '.owl-item:not(.cloned) a' && '.owl-item a',
-    hash: false,
-    thumbs: {
-        autoStart: false
-    },
-    arrows: false,
-    infobar: false,
-    buttons: [
-        'zoom',
-        'close'
-    ]
-});
+setTimeout(() => {
+    $('.carousel').slick({
+        arrows: false,
+        slidesToShow: 1,
+        slidestoScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        pauseOnHover: false
+    })
+}, 500);
+
 
 
 $('#navBarFb').mouseenter(() => {

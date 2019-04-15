@@ -19,7 +19,7 @@
 }
 
 #logo {
-  height: 65px;
+  height: 60px;
   margin-left: 30px;
   margin-top: 5px;
 }
@@ -38,7 +38,7 @@
   color: white;
   font-size: 18px;
   text-decoration: none;
-  font-family: Helvetica;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .navLinks a:hover {
@@ -51,7 +51,7 @@
   color: white;
   font-size: 18px;
   text-decoration: none;
-  font-family: Helvetica;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .dropDown:hover span {
@@ -86,7 +86,7 @@
   font-size: 17px;
   margin-left: 5px;
   text-decoration: none;
-  font-family: Helvetica;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .dropDownContent a:hover {
@@ -108,20 +108,27 @@
 
 /******* END OF NAVBAR *******/
 
-#about {
-  height: 700px;
-  background: url('../images/business-suit.jpg') no-repeat center center;
+#hero {
+  height: 750px;
+  /* background-image: url('./../images/beach.jpg'); */
+  background-position: center;
   background-size: cover;
-  /* background-color: rgb(233, 233, 233); */
+  transition: background-image 1s ease-in-out;
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+}
+
+#about {
+  padding: 15px 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  background-color: rgb(235, 235, 235);
 }
 
 #aboutBg {
   width: 800px;
   grid-column: 2;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -129,13 +136,8 @@
 
 .bgBubble {
   border-radius: 7px;
-  opacity: .65;
+  opacity: .60;
   width: 100%;
-}
-
-.test {
-  height: 300px;
-  width: 450px;
 }
 
 .aboutContainer {
@@ -149,16 +151,16 @@
 }
 
 #aboutLogo {
-  width: 75%;
+  width: 70%;
   margin-bottom: 15px;
 }
 
 .aboutContainer p {
   text-align: center;
-  font-size: 18px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 21px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', '-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif Neue', sans-serif;
   color: rgb(223, 223, 223);
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 
 /******* END OF ABOUT *******/
@@ -193,139 +195,15 @@
 }
 
 #info div h2 {
-  font-family: Helvetica;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #info div p {
   font-size: 20px;
-  font-family: Helvetica;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /******* END OF INFO *******/
-
-#demo {
-  height: 300px;
-  padding: 40px 10px;
-  background-color: rgb(223, 223, 223);
-}
-
-#demo h1 {
-  text-align: center;
-  font-family: Helvetica;
-}
-
-.owl-prev {
-  width: 20px;
-  height: 70px;
-  position: absolute;
-  top: 35%;
-  /* margin-left: -10px; */
-  display: block !important;
-  border:0px solid black;
-}
-
-.owl-next {
-  width: 20px;
-  height: 70px;
-  position: absolute;
-  top: 35%;
-  right: 5px;
-  display: block !important;
-  /* border:0px solid black; */
-}
-
-/******* END OF DEMO *******/
-
-
-.owl-prev i, .owl-next i {transform : scale(2,3); color: rgb(235, 235, 235);}
-
-/******* END OF CAROUSEL *******/
-
-#footer {
-  height: 70px;
-  background-color: rgb(223, 223, 223);
-}
-
-.footerLinks {
-  float: right;
-  width: 500px;
-  height: 70px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.footerLinks a {
-  color: black;
-  font-size: 18px;
-  text-decoration: none;
-  font-family: Helvetica;
-}
-
-.dropUp {
-  position: relative;
-}
-
-.dropUp span {
-  color: black;
-  font-size: 18px;
-  font-family: Helvetica;
-}
-
-.dropUp:hover span {
-  color: white;
-}
-
-.footerLinks a:hover {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-}
-
-.dropUpFooter {
-  visibility: hidden;
-  position: absolute;
-  bottom: 0;
-}
-
-.dropUp:hover .dropUpFooter {
-  visibility: visible;
-  position: absolute;
-  bottom: 20px;
-  left: -20px;
-  height: 120px;
-  width: 150px;
-  padding-bottom: 20px;
-  padding-left: 2px;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-around;
-  background-color: rgb(223, 223, 223);
-  z-index: 1;
-}
-
-.dropUpFooter a {
-  color: black;
-  font-size: 17px;
-  margin-left: 5px;
-  text-decoration: none;
-  font-family: Helvetica;
-}
-
-.dropUpFooter a:hover {
-  color: white;
-  text-decoration: none;
-}
-
-#footerLine {
-  width: 2px;
-  height: 55px;
-  background-color: rgb(80, 80, 80);
-}
-
-/******* END OF FOOTER *******/
 
 /***************************************/
 
@@ -355,7 +233,7 @@
 }
 
 .contactMain p {
-  font-family: Helvetica;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-align: center;
 }
 
@@ -368,7 +246,7 @@
 }
 
 .contactMain a {
-  font-family: Helvetica;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: rgb(231, 199, 16);
 }
 
@@ -390,7 +268,7 @@
 }
 
 .contactForm p {
-  font-family: Helvetica;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin-bottom: 2px;
 }
 
@@ -456,14 +334,14 @@
   position: absolute;
   left: -8px;
   top: 22px;
-  font-family: Helvetica;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   opacity: .60;
   font-size: 18px;
 }
 
 .travelBg div p {
   font-size: 18px;
-  font-family: Helvetica;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .scrollTop {
@@ -583,7 +461,7 @@
 }
 
 .fadeCard h3 {
-  font-family: Helvetica;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 22px;
 }
 
