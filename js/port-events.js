@@ -1,10 +1,11 @@
 const sisterWedding = $('#sisterWedding');
+const joshJess = $('#joshJess');
 
-renderGallery = doc => {
-    let photo = $(`<a href="${doc.data().img}" data-fancybox="sister-wedding" data-thumb="${doc.data().img}"></a>`);
-    $(sisterWedding).append(photo);
+renderDynamically = async (doc, fancybox, parent) => {
+    let photo = $(`<a href="${doc.data().img}" data-fancybox="${fancybox}" data-thumb="${doc.data().img}"></a>`);
+    $(parent).append(photo);
 
-    $('[data-fancybox="sister-wedding"]').fancybox({
+    $(`[data-fancybox="${fancybox}"]`).fancybox({
         thumbs: {
             autoStart: true,
             axis: 'x'
@@ -20,32 +21,15 @@ renderGallery = doc => {
 
 db.collection('sister-wedding').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
-        renderGallery(doc);
+        // renderSisterWedding(doc);
+        renderDynamically(doc, sisterWedding.attr('data-fancybox'), sisterWedding);
     })
 })
 
-$('[data-fancybox="gallery1"]').fancybox({
-    thumbs: {
-        autoStart: true,
-        axis: 'x'
-    },
-    arrows: true,
-    buttons: [
-        'zoom',
-        'close',
-        'thumbs'
-    ]
-});
+db.collection('josh-jess').get().then((snapshot) => {
+    snapshot.docs.forEach(doc => {
+        // renderJoshJess(doc)
+        renderDynamically(doc, joshJess.attr('data-fancybox'), $('#joshJess'))
+    })
+})
 
-$('[data-fancybox="gallery2"]').fancybox({
-    thumbs: {
-        autoStart: true,
-        axis: 'x'
-    },
-    arrows: true,
-    buttons: [
-        'zoom',
-        'close',
-        'thumbs'
-    ]
-});
